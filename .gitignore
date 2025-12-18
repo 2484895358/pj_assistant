@@ -1,0 +1,28 @@
+# Python standard
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# IDE settings
+.idea/
+.vscode/
+
+# Project specific logs and output
+logs/
+*.log
+screenshots/
+
+# Sensitive Data / Local Configuration
+storage_state.json
+config.yaml
+# We keep config.example.yaml so others know how to configure it
+
+# Generated files
+student_verification.pdf
+verification_template.html
+generate_pdf.py

@@ -1,0 +1,39 @@
+# 复制为 config.yaml 后修改
+
+# 登录页 URL（首次运行 run_login.py 需要）
+login_url: "https://example.edu/login"
+
+# 课程评教列表页 URL（包含 #kcpjDataTable 的页面）
+list_url: "https://example.edu/kcpj"
+
+browser:
+  headless: false
+  slow_mo_ms: 0
+
+# 单选题默认选项文字
+rating_text: "很满意"
+
+# 评语模板（会随机抽取一条写入 textarea）
+comment_templates:
+  - "老师讲解清晰，课堂组织有序，收获很大。"
+  - "内容重点突出，节奏把握得当，建议保持。"
+  - "课程案例丰富，互动充分，对理解很有帮助。"
+
+# 人为延迟（毫秒），用于降低过快点击导致的 UI 漏选
+delays_ms:
+  min: 0
+  max: 20
+
+# 等待你手动提交的最大秒数；0 表示无限等待
+manual_submit_max_wait_s: 0
+
+selectors:
+  table: "#kcpjDataTable"
+  pending_button: "td:last-child button:text-is(\"评价\")"
+  modal: ".modal:visible"
+  teacher_tabs: ".title .jsxx"
+  active_block: ".pjst .jslb.active"
+  question_block: ".tm[data-fs=\"5\"]"
+  comment_textarea: "textarea.form-control.da"
+  done_text: ".tmtj span"
+  submit_button: ".modal-footer button.sure"
